@@ -99,40 +99,40 @@ public class Lab4Ex1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Enter details for Alex's account:");
+        System.out.println("Enter details for smith account:");
         System.out.print("Name: ");
-        String alexName = scanner.nextLine();
+        String smithName = scanner.nextLine();
         System.out.print("Age: ");
-        float alexAge = scanner.nextFloat();
+        float smithAge = scanner.nextFloat();
         System.out.print("Initial Balance: ");
-        double alexInitialBalance = scanner.nextDouble();
+        double smithInitialBalance = scanner.nextDouble();
 
-        Person alex = new Person(alexName, alexAge);
-        Account alexAcc = new SavingsAccount(alex, alexInitialBalance);
+        Person smith = new Person(smithName, smithAge);
+        Account smithAcc = new SavingsAccount(smith, smithInitialBalance);
 
-        System.out.println("Enter details for Jamie's account:");
+        System.out.println("Enter details for Kathy account:");
         scanner.nextLine();  // Consume newline
         System.out.print("Name: ");
-        String jamieName = scanner.nextLine();
+        String KathyName = scanner.nextLine();
         System.out.print("Age: ");
-        float jamieAge = scanner.nextFloat();
+        float KathyAge = scanner.nextFloat();
         System.out.print("Initial Balance: ");
-        double jamieInitialBalance = scanner.nextDouble();
+        double KathyInitialBalance = scanner.nextDouble();
         System.out.print("Overdraft Limit: ");
         double overdraftLimit = scanner.nextDouble();
 
-        Person jamie = new Person(jamieName, jamieAge);
-        Account jamieAcc = new CurrentAccount(jamie, jamieInitialBalance, overdraftLimit);
+        Person Kathy = new Person(KathyName, KathyAge);
+        Account KathyAcc = new CurrentAccount(Kathy, KathyInitialBalance, overdraftLimit);
 
-        System.out.print("Enter deposit amount for Alex: ");
-        double alexDeposit = scanner.nextDouble();
-        alexAcc.deposit(alexDeposit);
-        System.out.println("Alex's account balance: " + alexAcc.getBalance());
+        System.out.print("Enter deposit amount for smith: ");
+        double smithDeposit = scanner.nextDouble();
+        alexAcc.deposit(smithDeposit);
+        System.out.println("smith account balance: " + smithAcc.getBalance());
 
-        System.out.print("Enter withdrawal amount for Jamie: ");
-        double jamieWithdraw = scanner.nextDouble();
-        jamieAcc.withdraw(jamieWithdraw);
-        System.out.println("Jamie's account balance: " + jamieAcc.getBalance());
+        System.out.print("Enter withdrawal amount for Kathy: ");
+        double KathyWithdraw = scanner.nextDouble();
+        KathyAcc.withdraw(KathyWithdraw);
+        System.out.println("Kathy account balance: " + KathyAcc.getBalance());
 
         scanner.close();
     }
